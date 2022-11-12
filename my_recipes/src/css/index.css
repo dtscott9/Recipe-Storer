@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
+
+:root {
+  --font: "Quicksand";
+  --background: rgb(127, 127, 188);
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+footer {
+  background-color: var(--background);
+  color: white;
+  padding: 1em;
+}
+
+body {
+  font-family: var(--font);
+  margin: 0 auto;
+  padding: 0;
+}
+
+/*Nav Section*/
+
+nav ul li {
+  list-style: none;
+  margin: 1em;
+  justify-content: end;
+}
+
+nav ul {
+  height: 100%;
+  display: flex;
+  flex: wrap;
+  justify-content: end;
+  color: white;
+}
+
+nav {
+  background-color: var(--background);
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.link {
+  text-decoration: none;
+  color: white;
+  transition: all 1s ease 0s;
+  padding: 1em;
+}
+
+.link:hover {
+  transition: all 1s ease 0s;
+  background-color: white;
+  color: black;
+}
+
+/*Home*/
+.home {
+  padding: 1em;
+}
+
+.hero {
+  text-align: center;
+}
+
+/*About*/
+
+/*Add Recipes*/
+
+/*Saved Recipes*/
