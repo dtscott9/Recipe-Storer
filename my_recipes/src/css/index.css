@@ -37,22 +37,32 @@ body {
 nav ul li {
   list-style: none;
   margin: 1em;
-  justify-content: end;
+
 }
 
-nav ul {
+.links {
   height: 100%;
-  display: flex;
-  flex: wrap;
-  justify-content: end;
+
   color: white;
+}
+
+.links li {
+  display: none;
+}
+
+.responsive li {
+  display: block;
 }
 
 nav {
   background-color: var(--background);
+  display: grid;
+  grid-template-columns: auto auto;
   width: 100%;
   padding: 0;
   margin: 0;
+  align-items: center;
+  justify-content: center;
 }
 
 .link {
@@ -62,10 +72,18 @@ nav {
   padding: 1em;
 }
 
-.link:hover {
-  transition: all 1s ease 0s;
-  background-color: white;
-  color: black;
+
+
+.logo {
+  width: 150px;
+}
+
+#ham {
+  color: white;
+  text-decoration: none;
+  justify-self: end;
+  padding: 1em;
+  font-size: 20px;
 }
 
 /*Home*/
@@ -77,8 +95,56 @@ nav {
   text-align: center;
 }
 
+.step {
+  width: 300px;
+  text-align: center;
+  margin: 20px;
+}
+
+.steps {
+  width: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+
+.stepImg {
+  width: 100%;
+}
+
 /*About*/
 
 /*Add Recipes*/
 
 /*Saved Recipes*/
+
+/*Desktop View*/
+@media screen and (min-width: 1050px) {
+  /*Home*/
+  #ham {
+    display: none;
+  }
+.links li {
+  display: inline;
+}
+.link:hover {
+  transition: all 1s ease 0s;
+  background-color: white;
+  color: black;
+}
+
+nav {
+  display: flex;
+}
+
+.steps {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+
+}
