@@ -25,7 +25,7 @@ React library, as well as the React-Router-Dom and Firebase libraries.
 {Make a list of websites that you found helpful in this project}
 * [Cloud Firestore](https://firebase.google.com/docs/firestore)
 * [How To Set Up React With Firebase/Firestore](https://www.youtube.com/watch?v=VJmNtYZl8i4&t=117s)
-* [How to store form data in Cloud Firestore with React](https://www.youtube.com/watch?v=VJmNtYZl8i4&t=117s)
+* [How to store form data in Cloud Firestore with React](https://www.youtube.com/watch?v=9keBDA_FLzs&t=29s)
 * [React Router 6 Tutorial #3 - Redirects & useNavigate](https://www.youtube.com/watch?v=zCgruoRUxlk)
 * [React With Firebase/Firestore | CRUD and Queries | Version 9](https://www.youtube.com/watch?v=-yrnWnN0g9o&t=477s)
 
