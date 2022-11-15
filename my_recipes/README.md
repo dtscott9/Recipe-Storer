@@ -1,70 +1,35 @@
-# Getting Started with Create React App
+# Overview
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a website I made in ReactJS called My Recipe Storer. It is still a work in progress, but the basic
+idea is that a user can register with the website using their Google sign in, and then create and save recipes.
+Each recipe is stored in Firebase Firestore and is tied to a user's Gmail account. 
 
-## Available Scripts
+[Software Demo Video](http://youtube.link.goes.here)
 
-In the project directory, you can run:
+# Web Pages
 
-### `npm start`
+* The Home page is the first page the users will see when they load the website. This page contains basic steps
+that the user can follow to create their first recipe.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+* The Create New Recipe page contains a form that the user will fill out, and when they click the submit button all of that info will be saved to a firestore database.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+* The Saved Recipes page will display each of the recipes that the user has submitted on the Create New Recipe page. 
 
-### `npm test`
+# Development Environment
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+I developed this project using the Visual Studio Code IDE as it's one I am very familiar with. I used the basic
+React library, as well as the React-Router-Dom and Firebase libraries. 
 
-### `npm run build`
+# Useful Websites
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+{Make a list of websites that you found helpful in this project}
+* [Cloud Firestore](https://firebase.google.com/docs/firestore)
+* [Web Site Name](http://url.link.goes.here)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# Future Work
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+* Change the Saved Recipes page to only display the recipe title and an image, and then upon
+clicking the recipe title you will be redirected to a page that displays only that recipe.
+* Add firebase storage so that users can store their own images and videos.
+* Create a sign in system that allows users to sign in with emails other than Google. 
