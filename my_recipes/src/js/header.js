@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Link, Navigate } from "react-router-dom";
 import { signInWGoogle } from "./firebase";
 import { signOutFromGoogle } from "./firebase";
 import { isLoggedIn } from "./firebase";
@@ -6,6 +6,7 @@ import Home from "./home";
 import About from "./about";
 import SavedRecipes from "./savedRecipes";
 import AddRecipe from "./addRecipe";
+import Recipe from "./recipe";
 import "../css/index.css";
 
 
@@ -57,7 +58,7 @@ function Header() {
           </Link>
         </li>
         <li>
-          <Link className="link" to="saved">
+          <Link className="link" to="saved" onClick={isLoggedIn}>
             Saved Recipes
           </Link>
         </li>
@@ -73,10 +74,13 @@ function Header() {
     </nav>
 
     <Routes>
+      <Route path="/" element={<Home/>} />
       <Route path="home" index element={<Home />}  />
       <Route path="about" element={<About />} />
       <Route path="saved" element={<SavedRecipes />} />
       <Route path="addRecipe" element={<AddRecipe />} />
+      <Route path="recipe" element={<Recipe/>} />
+      <Route path="/redirect" element={<Navigate to="home" />} />
     </Routes>
 
   </Router>

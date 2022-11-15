@@ -16,13 +16,13 @@ function Home() {
           <p>Click on the "Create New Recipe" tab. There you can fill out a template to save
             your recipe and add any links or videos.
           </p>
-          <img className="stepImg" src="images/HappyCooking-1.png" alt="happy man cooking"/>
+          <img className="stepImg" src="images/formDemo.png" alt="happy man cooking"/>
         </div>
         <div className="step">
           <h1>Step 2</h1>
           <p>Click on the "Saved Recipes" tab to view all of the recipes you have created so far.
           </p>
-          <img className="stepImg" src="images/HappyCooking-1.png" alt="happy man cooking"/>
+          <img className="stepImg" src="images/savedDemo.png" alt="happy man cooking"/>
         </div>
         <div className="step">
           <h1>Step 3</h1>

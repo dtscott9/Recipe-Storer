@@ -1,9 +1,11 @@
 
 import { db } from "./firebase";
 import { doc, setDoc } from "@firebase/firestore";
+import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 
 function AddRecipe() {
-
+    console.log("Test");
     const userLoggedIn = localStorage.getItem("email");
 
      async function saveInput(event) {
@@ -25,7 +27,10 @@ function AddRecipe() {
         await setDoc(doc(db, userLoggedIn, collectionName), {
             formData
         });
+        alert("Your recipe has been saved!") 
     }
+
+  const navigate = useNavigate();
   return (
     <div className="page">
       <div className="heroAdd">

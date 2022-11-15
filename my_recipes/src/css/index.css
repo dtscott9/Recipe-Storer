@@ -172,6 +172,17 @@ margin-right: 10px;
   text-align: center;
 }
 
+.recipes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.recipes h2 {
+  margin: 10px;
+}
+
 /*Desktop View*/
 @media screen and (min-width: 1050px) {
   /*Home*/
