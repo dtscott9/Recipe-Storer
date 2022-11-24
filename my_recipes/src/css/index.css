@@ -183,7 +183,31 @@ margin-right: 10px;
   margin: 10px;
 }
 
+/*Recipe Display*/
+.recipeDisplay{
+  margin: 0 auto;
+  width: 500px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
 /*Desktop View*/
+.recipes section{
+  width: 150px;
+  height: 200px;
+  text-align: center;
+  border-style: solid;
+  border-color: #555;
+  border-radius: 15px;
+  background-color: black;
+  margin: 10px;
+  color: white;
+}
+
+
+
+
 @media screen and (min-width: 1050px) {
   /*Home*/
   #ham {

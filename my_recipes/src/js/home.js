@@ -16,7 +16,7 @@ function Home() {
           <p>Click on the "Create New Recipe" tab. There you can fill out a template to save
             your recipe and add any links or videos.
           </p>
-          <img className="stepImg" src="images/formDemo.png" alt="happy man cooking"/>
+          <a href="saved"><img className="stepImg" src="images/formDemo.png" alt="happy man cooking"/></a>
         </div>
         <div className="step">
           <h1>Step 2</h1>

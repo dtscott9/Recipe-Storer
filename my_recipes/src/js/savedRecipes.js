@@ -2,45 +2,61 @@ import { doc, onSnapshot, collection, query, where, orderBy, limit, QuerySnapsho
 import { db } from "./firebase";
 import { useNavigate } from "react-router-dom";
 
-function SavedRecipes() {
-  const item = [];
+export function displayRecipe(createDetails) {
+  const items = [];
   const userLoggedIn = localStorage.getItem("email");
   const collectionRef = collection(db, userLoggedIn);
-  function displayRecipe() {
-    onSnapshot(collectionRef, (querySnapshot) => {
+  onSnapshot(collectionRef, (querySnapshot) => {
+    
+    querySnapshot.forEach((doc) => {
+      items.push(doc.data());
       
-      querySnapshot.forEach((doc) => {
-        item.push(doc.data());
-        
-      });
-      console.log(item);
-      item.forEach(CreateRecipeTitel);
-    })
-  }
+    });
+    
+    items.forEach((item) => {
+      createDetails(items,item);
+    });
+  })
+}
 
-  function CreateRecipeTitel(items) {
+function SavedRecipes() {
+
+  function CreateRecipeTitel(items, item) {
     //console.log(items);
 
-    const title = document.createElement("h2");
+    const icon = document.createElement("img");
+    icon.setAttribute("alt", "Icon Image");
+    icon.setAttribute("src", "images/cookBookIcon.png");
+    icon.setAttribute("width", "100px")
+    const title = document.createElement("h3");
     const description = document.createElement("p");
     const measure = document.createElement("p");
     const instruct = document.createElement("p");
     const video = document.createElement("iframe");
 
-    title.textContent = items.formData.recipeTitle;
-    description.textContent = items.formData.desc;
-    measure.textContent = items.formData.measurements;
-    instruct.textContent = items.formData.instructions;
-    video.setAttribute("src", items.formData.videoLink)
+    title.textContent = item.formData.recipeTitle;
+    description.textContent = item.formData.desc;
+    measure.textContent = item.formData.measurements;
+    instruct.textContent = item.formData.instructions;
+    video.setAttribute("src", item.formData.videoLink)
     video.setAttribute("width", "500px");
     video.setAttribute("height", "300px");
 
     const recipeTitleList = document.createElement("section");
     recipeTitleList.appendChild(title);
-    recipeTitleList.appendChild(description);
-    recipeTitleList.appendChild(measure);
-    recipeTitleList.appendChild(instruct);
-    recipeTitleList.appendChild(video);
+    recipeTitleList.appendChild(icon);
+
+    // recipeTitleList.appendChild(description);
+    // recipeTitleList.appendChild(measure);
+    // recipeTitleList.appendChild(instruct);
+    // recipeTitleList.appendChild(video);
+
+    recipeTitleList.addEventListener("click", ()=> {
+      console.log(items.indexOf(item));
+      localStorage.setItem("recipeI", items.indexOf(item));
+      document.location.href = "recipe";
+      
+    })
 
     document.querySelector(".recipes").appendChild(recipeTitleList);
     
@@ -49,7 +65,7 @@ function SavedRecipes() {
   }
   
 
-  displayRecipe();
+  displayRecipe(CreateRecipeTitel);
 
   return (
     <div className="page">

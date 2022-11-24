@@ -75,4 +75,5 @@ export function signOutFromGoogle() {
     document.querySelector(".signOut").style.display = "none";
     document.querySelector("#user").style.display = "none";
     
+    document.location.href = "home";
 }

@@ -27,7 +27,8 @@ function AddRecipe() {
         await setDoc(doc(db, userLoggedIn, collectionName), {
             formData
         });
-        alert("Your recipe has been saved!") 
+        alert("Your recipe has been saved!")
+        document.location.href = "saved";
     }
 
   const navigate = useNavigate();
